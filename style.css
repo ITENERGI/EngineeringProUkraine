@@ -1,118 +1,127 @@
-/* Базові налаштування */
+/* Загальні налаштування */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    background-color: #f8f9fa;
     color: #333;
-    background-color: #fff;
+    line-height: 1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
 }
 
-/* Верхня частина (Hero) */
+/* Головний екран (Hero) */
 .hero {
-    background-color: #2c3e50;
-    color: white;
-    padding: 60px 20px;
+    background-color: #1e2d3d;
+    color: #ffffff;
+    padding: 60px 0 80px 0;
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.accent {
-    color: #f1c40f;
+.hero .accent {
+    color: #ffcc00;
 }
 
-.subtitle {
-    margin: 20px 0 30px;
-    font-size: 1.1rem;
-    opacity: 0.9;
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
 }
 
+/* Кнопка виклику */
 .btn {
     display: inline-block;
-    background-color: #f1c40f;
-    color: #000;
-    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #1e2d3d;
     text-decoration: none;
+    padding: 15px 35px;
     font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 6px;
+    transition: background 0.2s;
+    font-size: 1rem;
 }
 
 .btn:hover {
-    background-color: #d4ac0d;
+    background-color: #e6b800;
 }
 
 /* Секція послуг */
 .services {
-    padding: 60px 0;
-    background-color: #f4f4f4;
+    padding: 80px 0;
 }
 
 .services h2 {
-    margin-bottom: 40px;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    color: #1e2d3d;
+    margin-bottom: 50px;
+    font-weight: 700;
 }
 
-/* Гнучка сітка для карток */
 .services-grid {
     display: flex;
-    flex-wrap: wrap; /* Дозволяє переносити картки на новий рядок */
-    gap: 20px;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+/* Картки послуг */
 .card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    flex: 1 1 300px; /* Картка намагається бути 300px, але розтягується */
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    width: 100%;
     max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
 .card h3 {
+    font-size: 1.3rem;
+    color: #1e2d3d;
     margin-bottom: 15px;
-    color: #2c3e50;
+    font-weight: 600;
 }
 
-/* Футер */
-footer {
-    background-color: #1a252f;
-    color: #bdc3c7;
-    padding: 40px 0;
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Підвал сайту */
+.footer {
+    background-color: #1e2d3d;
+    color: #cbd5e1;
+    padding: 30px 0;
     font-size: 0.9rem;
 }
 
-footer a {
-    color: #fff;
+.footer a {
+    color: #ffcc00;
     text-decoration: none;
 }
 
-/* Адаптація під маленькі екрани (смартфони) */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 1.8rem; /* Зменшуємо заголовок, щоб вліз в екран */
-    }
+.footer p {
+    margin-bottom: 5px;
+}
 
-    .hero {
-        padding: 40px 10px;
-    }
-
-    .card {
-        flex: 1 1 100%; /* На телефонах картка займає всю ширину */
-    }
+/* Адаптивність під мобільні телефони */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .services-grid { flex-direction: column; align-items: center; }
+    .card { max-width: 100%; }
 }
