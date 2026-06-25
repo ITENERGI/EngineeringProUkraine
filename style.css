@@ -79,24 +79,25 @@ body {
 
 /* Карточки услуг */
 .card {
-    background: #ffffff;
+    background: #4caf50; /* Нейтральний зелений колір фону */
     padding: 30px 20px;
     border-radius: 8px;
     flex: 1;
     min-width: 280px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Трохи посилена тінь для кращого об'єму */
 }
 
 .card h3 {
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #1a252f;
+    color: #ffffff; /* Білий колір для назв послуг */
 }
 
 .card p {
-    color: #7f8c8d;
+    color: #f1f5f9; /* Світлий колір для тексту опису */
     font-size: 0.95rem;
 }
+
 
 /* Секция формы */
 .callback-section {
